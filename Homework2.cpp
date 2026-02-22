@@ -7,6 +7,9 @@ struct Node {
 };
 
 // Floyd's cycle-finding algorithm (Tortoise and Hare)
+//It seems that this week's homework was sent in complete? But I can describe it here. Essentially if the fast pointer (hare)
+// ever equals the slow pointer (tortoise) it means that the fast pointer must have looped around and caught up to the 
+// slow pointer, which proves that there is a loop in the list
 bool hasCycle(Node* head) {
     if (!head) return false;
     Node* slow = head;
